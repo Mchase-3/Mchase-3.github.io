@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>第二阶段总结</title>
-    <url>/2020/03/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/</url>
+    <url>/2020/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="2-9"><a href="#2-9" class="headerlink" title="2.9"></a>2.9</h3><h4 id="语言转换-模拟"><a href="#语言转换-模拟" class="headerlink" title="语言转换(模拟)"></a>语言转换(模拟)</h4><p>一道模拟题，需要注意细节的问题，考试的时候写锅了，惨遭报零 QAQ。</p>
 <h4 id="相互攻击-二分答案"><a href="#相互攻击-二分答案" class="headerlink" title="相互攻击(二分答案)"></a>相互攻击(二分答案)</h4><p><code>最大化最近的两个总统之间的距离</code>，将问题转化为 “是否存在一种安排使距离不大于 $Len$ “，可以用贪心进行判断，二分 $Len$ 即可。</p>
 <h4 id="战争游戏-Tanjan-树形DP"><a href="#战争游戏-Tanjan-树形DP" class="headerlink" title="战争游戏(Tanjan+树形DP)"></a>战争游戏(Tanjan+树形DP)</h4><p>考虑点与点之间必须经过的只有割点，如果在同一个点双联通分量中的话，则没有必经的点，那么只需要把所有的点双联通分量缩点，之后形成一棵树的结构，在树上计算经过每个点的点对数量成了一个简单的树形动归，就可以解决了。</p>
@@ -64,7 +64,7 @@
   </entry>
   <entry>
     <title>First</title>
-    <url>/2020/03/First/</url>
+    <url>/2020/First/</url>
     <content><![CDATA[<a id="more"></a>
 <p>First time</p>
 ]]></content>
@@ -77,7 +77,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2020/03/hello-world/</url>
+    <url>/2020/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>

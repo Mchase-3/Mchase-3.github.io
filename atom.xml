@@ -18,8 +18,8 @@
   
   <entry>
     <title>第二阶段总结</title>
-    <link href="http://yoursite.com/2020/03/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2020/03/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/</id>
+    <link href="http://yoursite.com/2020/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2020/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/</id>
     <published>2020-03-03T01:31:16.000Z</published>
     <updated>2020-03-03T08:12:14.734Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>First</title>
-    <link href="http://yoursite.com/2020/03/First/"/>
-    <id>http://yoursite.com/2020/03/First/</id>
+    <link href="http://yoursite.com/2020/First/"/>
+    <id>http://yoursite.com/2020/First/</id>
     <published>2020-03-02T12:33:35.000Z</published>
     <updated>2020-03-03T08:08:12.426Z</updated>
     
@@ -72,8 +72,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/03/hello-world/"/>
-    <id>http://yoursite.com/2020/03/hello-world/</id>
+    <link href="http://yoursite.com/2020/hello-world/"/>
+    <id>http://yoursite.com/2020/hello-world/</id>
     <published>2020-03-02T07:36:01.815Z</published>
     <updated>2020-03-03T08:11:08.063Z</updated>
     

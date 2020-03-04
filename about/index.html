@@ -7,6 +7,8 @@
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
+  <!--live2d-->
+  <script src="/live2d-widget/autoload.js"></script>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -103,7 +105,7 @@
 <meta property="og:site_name" content="Mchase">
 <meta property="og:description" content="功能尚在完善，敬请谅解qwq！ 本 Blog 所参考的网站：  Hexo NexT 主题美化记录 自定义博客添加Rss订阅 hexo 创建文章、标签、分类的Front-matter 使用LaTex添加公式到Hexo博客里 Hexo+Next个人博客主题优化 一个看板娘入住你的个人博客只需要三步 npm install出现”Unexpected end of JSON input while par">
 <meta property="article:published_time" content="2020-03-03T01:07:33.000Z">
-<meta property="article:modified_time" content="2020-03-03T03:28:17.893Z">
+<meta property="article:modified_time" content="2020-03-04T04:09:12.215Z">
 <meta property="article:author" content="Mchase">
 <meta property="article:tag" content="Mchase">
 <meta property="article:tag" content="bolg">
@@ -246,7 +248,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-commenting-o"></i> <br />
             
-            留言区
+            留言板
           </a>
         </li>
       
@@ -347,6 +349,8 @@
 <li><a href="https://blog.csdn.net/nightwishh/article/details/99647545" target="_blank" rel="noopener">git报错ssh: connect to host github.com port 22: Connection timed out</a></li>
 <li><a href="https://blog.csdn.net/q258523454/article/details/103233375" target="_blank" rel="noopener">win10:ssh-keygen unknown key type -rsa</a></li>
 <li><a href="https://www.jianshu.com/p/728a9594bb6c" target="_blank" rel="noopener">hexo+next使用Valine评论系统</a></li>
+<li><a href="https://github.com/stevenjoezhang/live2d-widget" target="_blank" rel="noopener">把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform</a></li>
+<li><a href="https://blog.csdn.net/qq_39610915/article/details/90679768" target="_blank" rel="noopener">Hexo博客优化：在Next主题中设置进阶版Live2D看板娘————拒绝踩坑！！！！</a></li>
 </ul>
 
         
@@ -1118,7 +1122,9 @@
 
   <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
 <script type="text/javascript" src="/js/src/custom.js"></script>
-<script src="/node_modules/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"node_modules/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/node_modules/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-shizuku"},"display":{"position":"right","width":150,"height":300},"react":{"opacity":0.7},"mobile":{"show":true},"log":false});</script></body>
 </html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
 <!--搞怪欺骗-->
 <script type="text/javascript" src="/js/src/funny_title.js"></script>
