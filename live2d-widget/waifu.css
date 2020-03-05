@@ -1,18 +1,20 @@
-#waifu-toggle {
-	background-color: #fa0;
-	border-radius: 5px;
-	bottom: 66px;
-	color: #fff;
+#waifu-toggle { /* 控制一个写着“看板娘”的标签？ */
+    /* 研究发现，是关闭看板娘后点击恢复的按钮 */
+	background-color: #fa0; /* 背景颜色 */
+	border-radius: 5px; /* 圆形范围（越大越圆） */
+	bottom: 66px; /* 距底部的高度 */
+	color: #fff; /* 字体颜色 */
 	cursor: pointer;
-	font-size: 12px;
-	left: 0;
-	margin-left: -100px;
-	padding: 5px 2px 5px 5px;
+	font-size: 12px; /* 字体大小 */
+	left: 0; /* 控制标签位置（离左边距离越大越远？） */
+	margin-left: -100px; /* 控制标签位置（离右边距离越小越远？） */
+	padding: 5px 5px 5px 5px;
+	/* 1:标签上高度 2:标签右宽度 3:标签下高度 4:标签左宽度 */
 	position: fixed;
 	transition: margin-left 1s;
-	width: 60px;
+	width: 60px; /* 宽度？？？ */ 
 	writing-mode: vertical-rl;
-}
+}/* 标签位置非常玄学qwq */
 
 #waifu-toggle.waifu-toggle-active {
 	margin-left: -50px;
@@ -25,10 +27,12 @@
 #waifu {
 	bottom: -1000px;
 	left: 0;
-	line-height: 0;
+	line-height: 0; /* Live2D人物距底部的高度 */
 	position: fixed;
-	transform: translateY(3px);
+	transform: translateY(110px);
+	/* Live2D向下缩的长度（鼠标放置恢复） */
 	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
+	/* live2D出场和退场效果 */
 	z-index: 1;
 }
 
@@ -36,32 +40,29 @@
 	transform: translateY(0);
 }
 
-/* 控制在多宽的屏幕下不显示 */
-/*
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* 控制在多宽的屏幕下不显示 */
 	#waifu {
 		display: none;
 	}
 }
-*/
 
-#waifu-tips {
+#waifu-tips { /* 对话框 */
 	animation: shake 50s ease-in-out 5s infinite;
-	background-color: rgba(236, 217, 188, .5);
-	border: 1px solid rgba(224, 186, 140, .62);
-	border-radius: 12px;
-	box-shadow: 0 3px 15px 2px rgba(191, 158, 118, .2);
-	font-size: 14px;
-	line-height: 24px;
-	margin: -30px 20px;
-	min-height: 70px;
-	opacity: 0;
+	background-color: rgba(236, 217, 188, 0.5); /* 背景颜色 */
+	border: 1px solid rgba(224, 186, 140, 0.62); /* 边框设置 */
+	border-radius: 12px; /* 圆形范围（越大越圆） */
+	box-shadow: 0 3px 15px 2px rgba(191, 158, 118, .2); /* 阴影设置 */
+	font-size: 14px; /* 字体大小 */
+	line-height: 24px; /* 文字离对话框顶的距离 */
+	margin: -30px 20px; /* 对话框位置 1:上下 2:左右 */
+	min-height: 70px; /* 对话框最小高度 */
+	opacity: 0; /* ??? */
 	overflow: hidden;
-	padding: 5px 10px;
+	padding: 5px 10px; /* 对话框大小? */
 	position: absolute;
 	text-overflow: ellipsis;
 	transition: opacity 1s;
-	width: 250px;
+	width: 250px; /* 对话框宽度 */
 	word-break: break-all;
 }
 
@@ -70,7 +71,7 @@
 	transition: opacity .2s;
 }
 
-#waifu-tips span {
+#waifu-tips span { /* 对话框链接颜色 */
 	color: #0099cc;
 }
 
@@ -83,30 +84,30 @@
 	cursor: grabbing;
 }
 
-#waifu-tool {
+#waifu-tool { /* 工具栏 */
 	color: #aaa;
 	opacity: 0;
 	position: absolute;
-	right: -10px;
-	top: 70px;
-	transition: opacity 1s;
+	right: -10px; /* 越大越向左 */
+	top: 70px; /* 越大越向下 */
+	transition: opacity 1s; /* 工具栏出现/消失 */
 }
 
 #waifu:hover #waifu-tool {
 	opacity: 1;
 }
-
+/*  */
 #waifu-tool span {
-	color: #5b6c7d;
+	color: #5b6c7d; /* 工具栏图标颜色 */
 	cursor: pointer;
 	display: block;
-	line-height: 30px;
+	line-height: 30px; /* 工具栏图标间隔 */
 	text-align: center;
-	transition: color .3s;
+	transition: color 0.3s; /* 工具栏图标鼠标放置颜色持续时间 */
 }
 
 #waifu-tool span:hover {
-	color: #0684bd; /* #34495e */
+	color: #0684bd; /* #34495e */  /* 工具栏图标鼠标放置颜色 */
 }
 
 @keyframes shake {
