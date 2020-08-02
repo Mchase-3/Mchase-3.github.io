@@ -1,12 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo博客制作</title>
+    <url>/2020/Hexo%E5%8D%9A%E5%AE%A2%E5%88%B6%E4%BD%9C/</url>
+    <content><![CDATA[<p>本 Blog 所参考的网站：</p>
+<a id="more"></a>
+<ul>
+<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">文档 | Hexo</a></li>
+<li><a href="https://www.jianshu.com/p/64caf29fdd0c" target="_blank" rel="noopener">Hexo NexT 主题美化记录</a></li>
+<li><a href="https://www.jianshu.com/p/ca079375c8ba" target="_blank" rel="noopener">自定义博客添加Rss订阅</a></li>
+<li><a href="https://www.jianshu.com/p/6e4af897a3f0" target="_blank" rel="noopener">hexo 创建文章、标签、分类的Front-matter</a></li>
+<li><a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">使用LaTex添加公式到Hexo博客里</a></li>
+<li><a href="https://www.jianshu.com/p/efbeddc5eb19" target="_blank" rel="noopener">Hexo+Next个人博客主题优化</a></li>
+<li><a href="https://www.cnkirito.moe/live2d/" target="_blank" rel="noopener">一个看板娘入住你的个人博客只需要三步</a></li>
+<li><a href="https://blog.csdn.net/ITLionWoo/article/details/78632643" target="_blank" rel="noopener">npm install出现”Unexpected end of JSON input while parsing near”错误解决方法</a></li>
+<li><a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">Font Awesome一套绝佳的图标字体库和CSS框架</a></li>
+<li><a href="https://www.jianshu.com/p/66facbd8926a" target="_blank" rel="noopener">如何加速国内Github访问</a></li>
+<li><a href="https://blog.csdn.net/nightwishh/article/details/99647545" target="_blank" rel="noopener">git报错ssh: connect to host github.com port 22: Connection timed out</a></li>
+<li><a href="https://blog.csdn.net/q258523454/article/details/103233375" target="_blank" rel="noopener">win10:ssh-keygen unknown key type -rsa</a></li>
+<li><a href="https://www.jianshu.com/p/728a9594bb6c" target="_blank" rel="noopener">hexo+next使用Valine评论系统</a></li>
+<li><a href="https://github.com/stevenjoezhang/live2d-widget" target="_blank" rel="noopener">把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform</a></li>
+<li><a href="https://blog.csdn.net/qq_39610915/article/details/90679768" target="_blank" rel="noopener">Hexo博客优化：在Next主题中设置进阶版Live2D看板娘————拒绝踩坑！！！！</a></li>
+<li><a href="https://blog.csdn.net/Fitz1318/article/details/86548129" target="_blank" rel="noopener">Hexo文章中插入图片的方法</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>汇总</category>
+      </categories>
+      <tags>
+        <tag>参考</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论学习-扩展中国剩余定理</title>
+    <url>/2020/%E6%95%B0%E8%AE%BA%E5%AD%A6%E4%B9%A0-%E6%89%A9%E5%B1%95%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h3 id="数论学习-扩展中国剩余定理"><a href="#数论学习-扩展中国剩余定理" class="headerlink" title="数论学习-扩展中国剩余定理"></a>数论学习-扩展中国剩余定理</h3><p>求解同余方程组</p>
+<script type="math/tex; mode=display">\begin{cases} x \equiv a_1 \pmod{m_1} \\ x \equiv a_2 \pmod{m_2} \\ \cdots \\ x \equiv a_n \pmod{m_n}  \end{cases}</script><a id="more"></a>
+<p>之前学习的中国剩余定理给出的通解要求 $m_1,m_2, \dots ,m_n$ 两两互质。当 $m_1,m_2, \dots ,m_n$ 为<strong>不一定两两互质</strong>的整数时，将无法使用。</p>
+<p><strong>扩展中国剩余定理</strong></p>
+<p>假设已经求出前 $k-1$ 个同余方程的解为 $x_{k-1}$ 且有 $M_{k-1} = \operatorname{lcm}{(m_1,m_2, \dots ,m_{k-1} )}$</p>
+<p>则前 $k-1$ 个方程的通解为 $x_{k-1}+i*M_{k-1}   (i \in Z)$</p>
+<p>那么对于当前方程 $x \equiv a_k \pmod{m_k}$，可转化为求一个数 ，使得 $x_{k-1}+t<em>M_{k-1} \equiv a_k \pmod{m_k}$，移项可得 $t</em>M_{k-1} \equiv a_k-x_{k-1} \pmod{m_k}$，用扩展欧几里得算法求解即可。</p>
+<p>若该同余式无解，则整个方程组无解， 若有，则前 $k$ 个同余式组成的方程组的通解为 $x_k = x_{k-1}+t*M_{k-1}$。</p>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">Exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!b) <span class="keyword">return</span> x=<span class="number">1</span>,y=<span class="number">0</span>,a;</span><br><span class="line">	ll reg=Exgcd(b,a%b,y,x);</span><br><span class="line">	<span class="keyword">return</span> y-=(a/b)*x,reg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">Excrt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ll Pro=M[<span class="number">1</span>],Ans=A[<span class="number">1</span>],x,y;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=N; i++) &#123;</span><br><span class="line">		ll c=((A[i]-Ans)%M[i]+M[i])%M[i];</span><br><span class="line">		ll gcd=Exgcd(Pro,M[i],x,y),Max=M[i]/gcd;</span><br><span class="line">		<span class="keyword">if</span>(c%gcd) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		x=Mul(x,c/gcd,Max),Ans+=x*Pro,Pro*=Max,Ans=(Ans%Pro+Pro)%Pro;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> (Ans%Pro+Pro)%Pro;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数论学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论学习-中国剩余定理</title>
+    <url>/2020/%E6%95%B0%E8%AE%BA%E5%AD%A6%E4%B9%A0-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h3 id="数论学习-中国剩余定理"><a href="#数论学习-中国剩余定理" class="headerlink" title="数论学习-中国剩余定理"></a>数论学习-中国剩余定理</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>中国剩余定理中国古代求解一次同余式组的方法，是数论中一个重要定理，又称孙子定理。<a id="more"></a>最早可见于中国公元5世纪的数学著作《孙子算经》，原文如下：</p>
+<blockquote>
+<p>有物不知其数，三三数之剩二，五五数之剩三，七七数之剩二。问物几何？</p>
+</blockquote>
+<p>其本质上是求解下面的同余方程组：</p>
+<script type="math/tex; mode=display">\begin{cases} x \equiv a_1 \pmod{m_1} \\ x \equiv a_2 \pmod{m_2} \\ \cdots \\ x \equiv a_n \pmod{m_n}  \end{cases}</script><p>其中 $m_1,m_2, \dots ,m_n$ 两两互质。</p>
+<blockquote>
+<p> <strong>中国剩余定理</strong>给出了该同余方程组的一组通解：</p>
+<script type="math/tex; mode=display">x \equiv \sum\limits_{i=1}^n a_iM_it_i \pmod{M}</script><p>其中 $M=\prod\limits_{i=1}^n m_i , M_i = M/m_i , t_i = \operatorname{inv}{(M_i)} \pmod{m_i} $</p>
+</blockquote>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">Exgcd</span><span class="params">(ll a,ll b,ll &amp;x,ll &amp;y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!b) <span class="keyword">return</span> x=<span class="number">1</span>,y=<span class="number">0</span>,a;</span><br><span class="line">	ll d=Exgcd(b,a%b,y,x);</span><br><span class="line">    y-=a/b*x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">CRT</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">register</span> <span class="keyword">int</span> i;</span><br><span class="line">	ll M=<span class="number">1</span>,reg=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>; i&lt;=N; i++) M*=a[i];</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>; i&lt;=N; i++) &#123;</span><br><span class="line">		ll m=M/a[i],p,y;</span><br><span class="line">		Exgcd(m,a[i],p,y),reg=(reg+m*b[i]*p)%M;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> reg&lt;<span class="number">0</span> ? reg+M : reg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>因为 $\forall k \neq i , M_i \equiv 0 \pmod{m_k} , a_iM_it_i \equiv a_i \pmod{m_i}$，显然得证。</p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数论学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论学习-卢卡斯定理</title>
+    <url>/2020/%E6%95%B0%E8%AE%BA%E5%AD%A6%E4%B9%A0-%E5%8D%A2%E5%8D%A1%E6%96%AF%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h3 id="数论学习-卢卡斯定理"><a href="#数论学习-卢卡斯定理" class="headerlink" title="数论学习-卢卡斯定理"></a>数论学习-卢卡斯定理</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>卢卡斯定理是一个关于组合数的定理，在OI中常用于求组合数对某质数的模。</p>
+<a id="more"></a>
+<p>根据组合数的定义</p>
+<script type="math/tex; mode=display">C_m^n= \dfrac{m!}{n!(m-n)!}</script><p>当然，在模意义下，我们要将除法转为求逆元，即</p>
+<script type="math/tex; mode=display">C_m^n \equiv{m!*\operatorname{inv}(n!)*\operatorname{inv}[(m-n)!]}\pmod{p}</script><p>逆元与阶乘的逆元都可以 $O(m)$ 推出，或者用扩展欧几里得算法 $O(\log{m})$ 求出。</p>
+<p>一般情况下，这样就足以求解。但是有些情况下，$p$ 会小于 $m$，此时 $m$ 和 $m-n$ 可能不存在逆元 ，我们将无法通过这种方法求出结果。这时我们便可以使用卢卡斯定理解决问题。</p>
+<p><strong>卢卡斯定理：</strong></p>
+<blockquote>
+<p>对于非负整数 $m,n$ 和质数 $p$，有</p>
+<script type="math/tex; mode=display">C_m^n \equiv{C_{m \bmod p}^{n \bmod p} \cdot C_{\left\lfloor \frac{m}{p} \right\rfloor}^{\left\lfloor \frac{n}{p} \right\rfloor}}\pmod{p}</script><p>当 $m&lt;n$ 时，规定 $C_m^n=0$</p>
+</blockquote>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><p>根据公式，很容易写出代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">int64 <span class="title">C</span><span class="params">(int64 N,int64 M,int64 Mod)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> M&lt;N ? <span class="number">0</span> : fact[M]*invf[N]%Mod*invf[M-N]%Mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int64 <span class="title">Lucas</span><span class="params">(int64 N,int64 M,int64 Mod)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> N ? Lucas(N/Mod,M/Mod,Mod)*C(N%Mod,M%Mod,Mod)%Mod : <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度为 $O(\log{(m*p)})$ 。</p>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>首先证明引理：</p>
+<blockquote>
+<p>若 $x$ 为小于 $p$ 的任意正整数，则</p>
+<script type="math/tex; mode=display">C_p^x \equiv0 \pmod{p}</script></blockquote>
+<script type="math/tex; mode=display">\begin{aligned} C_p^x & = \dfrac{p!}{x!(p-x)!} \\ & = \dfrac{p}{x} \cdot \dfrac{(p-1)!}{(x-1)![(p-1)-(x-1)]!} \\ & = \dfrac{p}{x} \cdot C_{p-1}^{x-1} \end{aligned}</script><p>考虑 $p$ 为质数且 $x&lt;p$，故存在 $x$ 在模 $p$ 意义下的逆元，所以 $C_p^x \equiv{p \cdot \operatorname{inv}(x) \cdot C_{p-1}^{x-1}} \pmod{p}$</p>
+<p>易知右式为 $p$ 的倍数，因此 $C_p^x \equiv0 \pmod{p}$</p>
+<p>又根据二项式定理，有 $(1+x)^m = \sum\limits_{k=0}^{m} C_m^k x^k$</p>
+<p>设 $m=s_1p+r_1 (r_1&lt;p_1),n=s_2p+r_2(r_2&lt;p)$ ，则有</p>
+<script type="math/tex; mode=display">\begin{aligned} (1+x)^m & = (1+x)^{s_1p+r_1} \\ & = (1+x)^{s_1p} \cdot (1+x)^{r_1} \\ & = (1+x^p)^{s_1} \cdot (1+x)^{r_1} \\ & = \sum\limits_{i=0}^{s_1} C_{s_1}^i x^{ip} \cdot \sum\limits_{j=0}^{r_1} C_{r_1}^j x^j \pmod{p} \end{aligned}</script><p>观察项 $x^n$ 的系数，得</p>
+<script type="math/tex; mode=display">\begin{aligned} C_m^n x^n & \equiv C_{s_1}^{s_2} x^{s_2p} \cdot C_{r_1}^{r_2} x^{r_2} \\ & \equiv C_{s_1}^{s_2} C_{r_1}^{r_2} x^{s_2n+r_2} \\ & \equiv C_{s_1}^{s_2} C_{r_1}^{r_2} x^n \pmod{p} \end{aligned}</script><p>因为 $p$ 为质数，所以 $x^n$ 的逆元一定存在。两边同时乘以 $x^n$ 的逆元，得</p>
+<script type="math/tex; mode=display">C_m^n x^n \equiv C_{s_1}^{s_2} C_{r_1}^{r_2} \pmod{p}</script><p>即</p>
+<script type="math/tex; mode=display">C_m^n \equiv{C_{m \bmod p}^{n \bmod p} \cdot C_{\left\lfloor \frac{m}{p} \right\rfloor}^{\left\lfloor \frac{n}{p} \right\rfloor}}\pmod{p}</script><p>证毕。</p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数论学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>暴力数据结构-珂朵莉树(ODT)</title>
     <url>/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/</url>
-    <content><![CDATA[<h3 id="暴力数据结构-珂朵莉树-ODT"><a href="#暴力数据结构-珂朵莉树-ODT" class="headerlink" title="暴力数据结构-珂朵莉树(ODT)"></a>暴力数据结构-珂朵莉树(ODT)</h3><a id="more"></a>
-<p><img src="001.jpg" alt="珂朵莉001"></p>
+    <content><![CDATA[<p><img src="001.jpg" alt="珂朵莉001"></p>
+<a id="more"></a>
 <p>（图片来自<a href="https://www.bilibili.com/read/cv146458?from=category_2" target="_blank" rel="noopener">哔哩哔哩</a>）</p>
-<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p><strong>珂朵莉树(Chtholly Tree，又称Old Driver Tree(ODT))</strong>，据说来源于<a href="https://codeforces.com/problemset/problem/896/C" target="_blank" rel="noopener">CF896C</a>，此题要求支持下列操作：</p>
+<h3 id="暴力数据结构-珂朵莉树-ODT"><a href="#暴力数据结构-珂朵莉树-ODT" class="headerlink" title="暴力数据结构-珂朵莉树(ODT)"></a>暴力数据结构-珂朵莉树(ODT)</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p><strong>珂朵莉树(Chtholly Tree，又称Old Driver Tree(ODT))</strong>，据说来源于<a href="https://codeforces.com/problemset/problem/896/C" target="_blank" rel="noopener">CF896C</a>，此题要求支持下列操作：</p>
 <ul>
 <li>区间加</li>
 <li>区间赋值</li>
