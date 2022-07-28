@@ -100,20 +100,20 @@
 
 
 
-<meta name="description" content="暴力数据结构-珂朵莉树(ODT) （图片来自哔哩哔哩） 介绍珂朵莉树(Chtholly Tree，又称Old Driver Tree(ODT))，据说来源于CF896C，此题要求支持下列操作：  区间加 区间赋值 求区间第 $k$ 小值 求区间 $n$ 次方和  看上去似乎普通的数据结构如线段树、平衡树等无法处理，需要一种巧妙复杂的数据结构。但出题人（@lxl）的题解中所实现的却是一种十分暴力的数">
+<meta name="description" content="暴力数据结构-珂朵莉树(ODT)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="暴力数据结构-珂朵莉树(ODT)">
 <meta property="og:url" content="http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/index.html">
 <meta property="og:site_name" content="Mchase">
-<meta property="og:description" content="暴力数据结构-珂朵莉树(ODT) （图片来自哔哩哔哩） 介绍珂朵莉树(Chtholly Tree，又称Old Driver Tree(ODT))，据说来源于CF896C，此题要求支持下列操作：  区间加 区间赋值 求区间第 $k$ 小值 求区间 $n$ 次方和  看上去似乎普通的数据结构如线段树、平衡树等无法处理，需要一种巧妙复杂的数据结构。但出题人（@lxl）的题解中所实现的却是一种十分暴力的数">
-<meta property="og:image" content="http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/001.jpg">
+<meta property="og:description" content="暴力数据结构-珂朵莉树(ODT)">
+<meta property="og:image" content="http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/001.jpg">
 <meta property="article:published_time" content="2020-04-18T09:09:17.000Z">
-<meta property="article:modified_time" content="2020-04-18T09:15:51.459Z">
+<meta property="article:modified_time" content="2020-04-18T09:27:15.216Z">
 <meta property="article:author" content="Mchase">
 <meta property="article:tag" content="暴力数据结构">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/001.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/001.jpg">
 
 
 
@@ -185,7 +185,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">原来姹紫嫣红开遍,似这般都付与断井颓垣。</p>
+        <p class="site-subtitle">失去的，才会珍惜。</p>
       
   </div>
 
@@ -261,6 +261,16 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-friends">
+          <a href="/friends/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-address-card-o"></i> <br />
+            
+            友人帐
           </a>
         </li>
       
@@ -376,7 +386,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-18T17:15:51+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-18T17:27:15+08:00">
                 2020-04-18
               </time>
             
@@ -473,7 +483,8 @@
       
 
       
-        <h3 id="暴力数据结构-珂朵莉树-ODT"><a href="#暴力数据结构-珂朵莉树-ODT" class="headerlink" title="暴力数据结构-珂朵莉树(ODT)"></a>暴力数据结构-珂朵莉树(ODT)</h3><p><img src="暴力数据结构-珂朵莉树-ODT\001.jpg" alt="珂朵莉"></p>
+        <h3 id="暴力数据结构-珂朵莉树-ODT"><a href="#暴力数据结构-珂朵莉树-ODT" class="headerlink" title="暴力数据结构-珂朵莉树(ODT)"></a>暴力数据结构-珂朵莉树(ODT)</h3><a id="more"></a>
+<p><img src="001.jpg" alt="珂朵莉001"></p>
 <p>（图片来自<a href="https://www.bilibili.com/read/cv146458?from=category_2" target="_blank" rel="noopener">哔哩哔哩</a>）</p>
 <h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p><strong>珂朵莉树(Chtholly Tree，又称Old Driver Tree(ODT))</strong>，据说来源于<a href="https://codeforces.com/problemset/problem/896/C" target="_blank" rel="noopener">CF896C</a>，此题要求支持下列操作：</p>
 <ul>
@@ -543,7 +554,7 @@
   <p><span>本文标题:</span>暴力数据结构-珂朵莉树(ODT)</a></p>
   <p><span>文章作者:</span>Mchase</a></p>
   <p><span>发布时间:</span>2020年04月18日 - 17:09:17</p>
-  <p><span>最后更新:</span>2020年04月18日 - 17:15:51</p>
+  <p><span>最后更新:</span>2020年04月18日 - 17:27:15</p>
   <p><span>原始链接:</span><a href="/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/" title="暴力数据结构-珂朵莉树(ODT)">http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2020/%E6%9A%B4%E5%8A%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91-ODT/"  aria-label="复制成功！"></i></span>
   </p>
@@ -727,6 +738,10 @@
                     <a href="https://www.cnblogs.com/HSY-2019/" title="HSY-2019" target="_blank">HSY-2019</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://loid.top" title="洛衣博客" target="_blank">洛衣博客</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -773,7 +788,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2020 &mdash; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heartbeat"></i>
   </span>
