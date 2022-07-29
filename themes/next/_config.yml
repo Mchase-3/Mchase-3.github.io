@@ -63,7 +63,7 @@ footer:
     version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text: Made by Mchase
+  custom_text: Made by Hexo
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -151,16 +151,16 @@ links_title: Links
 #links_layout: block
 links_layout: inline
 links:
-  #Title: http://example.com/
+  # Title: http://example.com/
   # 洛谷: https://www.luogu.com.cn/
-  # 中文马克思主义文库: https://www.marxists.org/chinese/
+  中文马克思主义文库: https://www.marxists.org/chinese/
   HSY-2019: https://www.cnblogs.com/HSY-2019/
   洛衣博客: https://loid.top
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/preview.jpg
+avatar: /images/touxiang.jpeg
 
 # Table Of Contents in the Sidebar
 toc:
