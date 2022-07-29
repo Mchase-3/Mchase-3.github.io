@@ -14,9 +14,9 @@ categories:
 
 ### 暴力数据结构-珂朵莉树(ODT)
 
-<!--more-->
+![珂朵莉001](\2020\暴力数据结构-珂朵莉树-ODT\001.jpg)
 
-![珂朵莉001](001.jpg)
+<!--more-->
 
 （图片来自[哔哩哔哩](https://www.bilibili.com/read/cv146458?from=category_2)）
 
