@@ -3,8 +3,7 @@
   <entry>
     <title>关于wav的一些事</title>
     <url>/2022/%E5%85%B3%E4%BA%8Ewav%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>关于wav的一些事 </p>
-<a id="more"></a>
+    <content><![CDATA[<h3 id="关于wav的一些事"><a href="#关于wav的一些事" class="headerlink" title="关于wav的一些事"></a>关于wav的一些事</h3><a id="more"></a>
 <p> <a href="https://www.aconvert.com/cn/" target="_blank" rel="noopener">在线转换文档，图像，视频，音频文件 </a></p>
 <p><a href="https://blog.csdn.net/yunjie167/article/details/88046155" target="_blank" rel="noopener"> 基于C语言的 WAV 文件双声道转单声道的实现</a></p>
 <p><a href="https://www.jianshu.com/p/d5f9077668fd" target="_blank" rel="noopener">Python将立体声转为单声道 </a></p>
